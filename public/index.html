@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de demande de formation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .radio-group label {
+            flex: 1;
+            text-align: center;
+        }
+        .radio-group input {
+            margin-right: 10px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .buttons .submit {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .buttons .cancel {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form id="training-form">
+        <label for="employee-name">Nom de l'employé.e :</label>
+        <select id="employee-name" name="employee-name">
+            <option value="employee1">Employé 1</option>
+            <option value="employee2">Employé 2</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="manager-name">Nom du gestionnaire :</label>
+        <input type="text" id="manager-name" name="manager-name" value="Chantal Bergevin" readonly>
+
+        <label for="provider">Nom du fournisseur tierce partie :</label>
+        <input type="text" id="provider" name="provider" placeholder="ex. : Udemy.com">
+
+        <label for="course-code">Code du cours :</label>
+        <input type="text" id="course-code" name="course-code">
+
+        <label for="course-title">Titre du cours :</label>
+        <input type="text" id="course-title" name="course-title">
+
+        <label for="registration-deadline">Date limite d'inscription :</label>
+        <input type="date" id="registration-deadline" name="registration-deadline">
+
+        <label for="category">Catégorie :</label>
+        <select id="category" name="category">
+            <option value="project-management">Gestion de projet</option>
+            <option value="it">Informatique</option>
+            <option value="hr-management">Gestion des ressources humaines</option>
+        </select>
+
+        <label>Modalité pédagogique :</label>
+        <div class="radio-group">
+            <label><input type="radio" name="modality" value="in-person"> En personne</label>
+            <label><input type="radio" name="modality" value="virtual-classroom"> En salle de classe virtuelle</label>
+            <label><input type="radio" name="modality" value="self-paced"> Apprentissage virtuel à son rythme</label>
+        </div>
+
+        <label>Langue du cours :</label>
+        <div class="radio-group">
+            <label><input type="radio" name="language" value="english"> Anglais</label>
+            <label><input type="radio" name="language" value="french"> Français</label>
+        </div>
+
+        <label for="duration">Durée du cours (en heures) :</label>
+        <input type="number" id="duration" name="duration">
+
+        <label for="fees">Frais du cours (CAD) :</label>
+        <input type="number" id="fees" name="fees">
+
+        <label for="start-date">Date de début du cours :</label>
+        <input type="date" id="start-date" name="start-date">
+
+        <div class="buttons">
+            <button type="submit" class="submit">Soumettre</button>
+            <button type="button" class="cancel" onclick="resetForm()">Annuler</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('training-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche le rechargement de la page
+            alert('Demande envoyé avec succés!');
+            document.getElementById('training-form').reset();
+        });
+
+        function resetForm() {
+            document.getElementById('training-form').reset();
+        }
+    </script>
+</body>
+</html>
