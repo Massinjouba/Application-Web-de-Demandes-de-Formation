@@ -1,4 +1,4 @@
-📚 Projet d'Automatisation des Demandes de Formation
+#📚 Projet d'Automatisation des Demandes de Formation
 
 Introduction La Compagnie Fictive ABC veut automatiser le processus de demandes de formation via une application web pour améliorer l'efficacité et la gestion.
 
@@ -6,9 +6,12 @@ Fonctionnalités 📝 Soumission de Demande: Interface pour remplir et soumettre
 
 Technologies Utilisées Frontend: React.js Backend: Node.js, Express Base de Données: MySQL Tests: Selenium
 
-🚀 Contributeurs
+#🚀 Contributeurs
 
-Idir Kebbiche
-Bouguettaya Amine
-Massinissa Idir Rahmani
-Issad Rayan
+-Idir Kebbiche
+
+-Bouguettaya Amine
+
+-Massinissa Idir Rahmani
+
+-Issad Rayan
